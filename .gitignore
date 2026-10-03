@@ -1,0 +1,22 @@
+# Keil build output
+**/Objects/
+**/Listings/
+
+# Keil generated files
+*.o
+*.d
+*.crf
+*.axf
+*.map
+*.htm
+*.lnp
+*.dep
+
+# Keil temporary / user-specific files
+*.uvguix.*
+*.uvopt
+*.bak
+
+# Windows
+Thumbs.db
+Desktop.ini
