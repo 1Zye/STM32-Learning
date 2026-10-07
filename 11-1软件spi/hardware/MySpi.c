@@ -74,10 +74,12 @@ uint8_t MySPI_SwapByte(uint8_t SendByte){
 				MySPI_W_SCK(1);//模式0第一个边沿移入数据
 				if (MySPI_R_MISO() == 1){
 						ReceiveByte |= (0x80 >> i);
-				}		
+						
+				}
+				MySPI_W_SCK(0);//记得收完一位要变回去
+
 		}
 		
-		MySPI_W_SCK(0);
 		return ReceiveByte;
 
 
