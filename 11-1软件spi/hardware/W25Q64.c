@@ -59,21 +59,23 @@ void W25Q64_PageProgram(uint32_t Address, uint8_t *DataArray, uint16_t Count){
 }
 
 
-uint8_t W25Q64_ReadData(uint32_t Address){
+void W25Q64_ReadData(uint32_t Address, uint8_t *DataArray, uint16_t Count){
 
-		uint8_t ReceiveData;
+		uint8_t i;
 	
 		MySpi_Start();
 		MySPI_SwapByte(0x03);
 		MySPI_SwapByte(Address>>16);
     MySPI_SwapByte(Address>>8);
 		MySPI_SwapByte(Address);
-
-		ReceiveData = MySPI_SwapByte(0xFF);
 		
+		for(i=0;i<Count;i++){
+				DataArray[i] = MySPI_SwapByte(0xFF);
+		
+		
+		}
 		MySpi_Stop();
 	
-		return ReceiveData;
 
 }
 
