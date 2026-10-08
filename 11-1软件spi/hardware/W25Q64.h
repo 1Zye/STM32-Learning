@@ -10,6 +10,7 @@ void W25Q64_PageProgram(uint32_t Address, uint8_t *DataArray, uint16_t Count);
 
 
 uint8_t W25Q64_ReadData(uint32_t Address);
+void SectorErase(uint32_t Address);
 
 
 

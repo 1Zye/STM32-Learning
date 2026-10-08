@@ -77,3 +77,16 @@ uint8_t W25Q64_ReadData(uint32_t Address){
 
 }
 
+void SectorErase(uint32_t Address){
+
+		MySpi_Start();
+		MySPI_SwapByte(0x20);
+		MySPI_SwapByte(Address>>16);
+    MySPI_SwapByte(Address>>8);
+		MySPI_SwapByte(Address);
+		MySpi_Stop();
+
+
+
+
+}
