@@ -1,0 +1,17 @@
+main.c: exit=0
+stm32f1xx_it.c: exit=0
+stm32f1xx_hal_msp.c: exit=0
+stm32f1xx_hal_gpio_ex.c: exit=0
+stm32f1xx_hal.c: exit=0
+stm32f1xx_hal_rcc.c: exit=0
+stm32f1xx_hal_rcc_ex.c: exit=0
+stm32f1xx_hal_gpio.c: exit=0
+stm32f1xx_hal_cortex.c: exit=0
+stm32f1xx_hal_pwr.c: exit=0
+stm32f1xx_hal_flash.c: exit=0
+stm32f1xx_hal_flash_ex.c: exit=0
+stm32f1xx_hal_exti.c: exit=0
+system_stm32f1xx.c: exit=0
+OLED.c: exit=0
+PASS: 15 C files compiled with ARM Compiler 6.7, -Wall -Werror -Wno-missing-braces (original flat font initializer); no link attempted.
+PASS: local source/include paths, no duplicate C files, 8 public OLED APIs, IOC GPIO, init order, no UART/SPL application calls.
